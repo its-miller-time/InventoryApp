@@ -34,7 +34,7 @@ class MeatDept extends Component{
             ) 
         })
             return(
-                <div>
+                <div className="container">
                     <AddItem dept='Meat' />
                     <ul>{meats}</ul>     
                 </div>

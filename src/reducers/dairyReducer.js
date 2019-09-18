@@ -27,7 +27,7 @@ export default(state = [], action) => {
         })
         return newState
     } else if(action.type === 'getInv-dairy'){
-        return action.data
+        return action.payload.data
     } else {
         return state
     }

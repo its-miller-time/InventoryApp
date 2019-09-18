@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from '../../../../../../Library/Caches/typescript/3.6/node_modules/redux';
+import { bindActionCreators } from 'redux';
 import clearInv from '../actions/clearInv'
 import resetInv from '../actions/resetInv';
+import './Main.css'
 
 class Main extends Component{
     constructor(props){
@@ -37,18 +38,25 @@ class Main extends Component{
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Frozen Total: {frozenQuantity}</td>
+                            <td>Frozen Total </td>
+                            <td>{frozenQuantity}</td>
                         </tr>
-                        <td>Meat Total: {meatQuantity}</td>
-                        <td>Dairy Total: {dairyQuantity}</td>
+                        <tr>
+                            <td>Meat Total</td>
+                            <td>{meatQuantity}</td>
+                        </tr>
+                        <tr>
+                            <td>Dairy Total</td>
+                            <td>{dairyQuantity}</td>
+                        </tr>
                     </tbody>
-                    <h1>Frozen Total: {frozenQuantity}</h1>
-                    <h1>Meat Total: {meatQuantity}</h1>
-                    <h1>Dairy Total: {dairyQuantity}</h1>
                     <br/>
                     {storeProductArr}
-                    <button onClick={this.props.clearInv}>Clear Inventory</button>
-                    <button onClick={this.props.resetInv}>Reset Inventory</button>
+                    <div className="main-button-group">
+                        <button className="waves-effect waves-light btn blue-grey darken-2" onClick={this.props.clearInv}>Clear Inventory</button>
+                        <button className="waves-effect waves-light btn blue-grey darken-2" onClick={this.props.resetInv}>Reset Inventory</button>
+                    </div>
+                   
                 </table>
             </div>
         )

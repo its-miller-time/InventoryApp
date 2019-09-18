@@ -15,7 +15,9 @@ class DairyDept extends Component{
     }
 
     changeQuantity = (operation,indexToChange) => {
-        this.props.updateDairy(operation,indexToChange)
+       
+            this.props.updateDairy(operation,indexToChange)
+        
     }
 
     render(){
@@ -24,7 +26,7 @@ class DairyDept extends Component{
                <div key={i}>
                     <h6>{food.toUpperCase()} in stock: {quantity}</h6>
                     <input className='add-button' type='button' onClick={()=> {this.changeQuantity('+',i)}} value="+" />
-                    <input className='add-button' type='button' onClick={()=> {this.changeQuantity('-',i)}} value="-" />
+                    <input className='add-button' type='button' onClick={()=> {this.changeQuantity('-',i)}} min='0' value="-" />
                </div> 
             )
         })

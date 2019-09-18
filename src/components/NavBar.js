@@ -12,8 +12,7 @@ class NavBar extends Component{
     render(){
         return(      
                 <nav>
-                    <div className="nav-wrapper blue-grey darken-2
-">
+                    <div className="nav-wrapper blue-grey darken-2">
                         <a href="#" className="brand-logo">Logo</a>
                             <ul id="nav-mobile" className="right hide-on-med-and-down">
                                 <li><Link to="/">Entire Store</Link></li>
